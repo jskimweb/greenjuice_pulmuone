@@ -27,8 +27,8 @@ window.onload = function() {
     });
 
     new Swiper('.sw-personal', {
-        // slidesPerview: 4,
-        // slidesPerGroup: 4,
+        slidesPerView: 4,
+        slidesPerGroup: 4,
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
