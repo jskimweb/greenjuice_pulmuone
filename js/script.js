@@ -1,14 +1,21 @@
-$(document).ready(function() {
-    $('.go-top').click(function(event) {
-        event.preventDefault();
+window.onload = function() {
+    $('.go-top').click(function() {
         var tgY = $('body').offset().top;
         $('html, body').animate({
             scrollTop: tgY,
         });
     });
-});
 
-window.onload = function() {
+    $(window).scroll(function(){  
+        var scY = $(window).scrollTop();
+        if(scY > 0) {
+            $('.go-top').addClass('go-top-show');
+        }
+        else {
+            $('.go-top').removeClass('go-top-show');
+        }
+    });
+
     new Swiper('.sw-main-slide', {
         loop: true,
         autoplay: {
@@ -51,5 +58,10 @@ window.onload = function() {
             crossFade: true,
         },
         speed: 500,
+    });
+
+    $('.family').click(function() {
+        $('.family').toggleClass('family--rotate');
+        $('.family-list').toggleClass('family-list--open');
     });
 }
