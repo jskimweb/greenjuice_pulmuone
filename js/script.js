@@ -1,67 +1,143 @@
-window.onload = function() {
-    $('.go-top').click(function() {
-        var tgY = $('body').offset().top;
-        $('html, body').animate({
-            scrollTop: tgY,
-        });
-    });
+window.onload = function () {
+  // 헤더상단 로그인 클릭 시 로그인창 보이기/숨기기
+  const headerLogin = $('.header-top-right li').eq(0).children();
+  const login = $('.login');
+  const loginId = $('.login__id');
+  const loginClose = $('.login__close');
 
-    $(window).scroll(function(){  
-        var scY = $(window).scrollTop();
-        if(scY > 0) {
-            $('.go-top').addClass('go-top-show');
-        }
-        else {
-            $('.go-top').removeClass('go-top-show');
-        }
-    });
+  headerLogin.click(function () {
+    login.show();
+    loginId.focus();
+    $('html, body').css('overflow', 'hidden');
+  });
+  loginClose.click(function () {
+    login.hide();
+    $('html, body').removeAttr('style');
+  });
 
-    new Swiper('.sw-main-slide', {
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true,
-        },
-        speed: 500,
-        pagination: {
-            el: '.sw-main-slide__pg',
-            type: 'fraction',
-        },
-    });
+  // 검색창 보이기/숨기기
+  const iconSrch = $('.my-menu__icon--srch');
+  const srch = $('.srch');
+  const srchClose = $('.srch__close');
+  const srchInput = $('.srch input');
+  const blackBg = $('.black-bg');
 
-    new Swiper('.sw-personal', {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        speed: 500,
-        pagination: {
-            el: '.sw-personal__pg',
-            clickable: true,
-        },
-    });
+  iconSrch.click(function () {
+    srch.show();
+    blackBg.show();
+    srchInput.focus();
+  });
+  srchClose.click(function () {
+    srch.hide();
+    blackBg.hide();
+  });
 
-    new Swiper('.sw-banner-slide', {
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true,
-        },
-        speed: 500,
-    });
+  // 검색창의 바깥영역 클릭 시 숨기기
+  const body = $('.body');
+  const header = $('.header');
 
-    $('.family').click(function() {
-        $('.family').toggleClass('family--rotate');
-        $('.family-list').toggleClass('family-list--open');
+  body.click(function () {
+    srch.hide();
+    blackBg.hide();
+  });
+  header.click(function (event) {
+    event.stopPropagation();
+  });
+
+  // 위시리스트 클릭 시 로그인창 보이기
+  const iconWish = $('.my-menu__icon--wish');
+
+  iconWish.click(function () {
+    login.show();
+    loginId.focus();
+    $('html, body').css('overflow', 'hidden');
+  });
+
+  // Main slide 슬라이드
+  new Swiper('.sw-main-slide', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+    speed: 500,
+    pagination: {
+      el: '.sw-main-slide__pg',
+      type: 'fraction',
+    },
+  });
+
+  // Personal 슬라이드
+  new Swiper('.sw-personal', {
+    slidesPerView: 4,
+    slidesPerGroup: 4,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    speed: 500,
+    pagination: {
+      el: '.sw-personal__pg',
+      clickable: true,
+    },
+  });
+
+  // 로그인하기 클릭 시 로그인창 보이기
+  const personalLogin = $('.personal__login');
+
+  personalLogin.click(function () {
+    login.show();
+    loginId.focus();
+    $('html, body').css('overflow', 'hidden');
+  });
+
+  // Banner Slide 슬라이드
+  new Swiper('.sw-banner-slide', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+    speed: 500,
+  });
+
+  // family-list 보이기/숨기기
+  const fam = $('.family');
+  const famRotate = 'family--rotate';
+  const famList = $('.family-list');
+  const famListShow = 'family-list--show';
+
+  fam.click(function () {
+    $(this).toggleClass(famRotate);
+    famList.toggleClass(famListShow);
+  });
+
+  // Go-top
+  const goTop = $('.go-top');
+  const goTopShow = 'go-top--show';
+
+  goTop.click(function () {
+    $('html, body').animate({
+      scrollTop: 0,
     });
+  });
+
+  // Go-top 보이기/숨기기
+  $(window).scroll(function () {
+    let winSrcTop = $(window).scrollTop();
+
+    if (winSrcTop > 0) {
+      goTop.addClass(goTopShow);
+    } else {
+      goTop.removeClass(goTopShow);
+    }
+  });
 }
