@@ -21,36 +21,36 @@
   <div class="login">
     <div class="login-box">
       <h2 class="login__tit">로그인</h2>
-    <button class="login__close"><i>닫기</i></button>
-    <form action="" method="GET" id=login-form>
-      <input type="text" placeholder="아이디" class="login__id">
-      <input type="password" placeholder="비밀번호" class="login__pw">
-      <div class="id-save-wrap">
-        <input type="checkbox" id="login__id-save">
-        <label for="login__id-save"><span>아이디 저장</span></label>
+      <button class="login__close"><i>닫기</i></button>
+      <form action="" method="GET" id=login-form>
+        <input type="text" placeholder="아이디" class="login__id">
+        <input type="password" placeholder="비밀번호" class="login__pw">
+        <div class="id-save-wrap">
+          <input type="checkbox" id="login__id-save">
+          <label for="login__id-save"><span>아이디 저장</span></label>
+        </div>
+        <button class="login__btn">로그인</button>
+        <p class="login-link">
+          <a href="#">아이디찾기</a>
+          <a href="#">비밀번호찾기</a>
+          <a href="#">회원가입</a>
+        </p>
+      </form>
+      <div class="login-sns">
+        <h3>SNS 간편 로그인</h3>
+        <button>
+          <i class="icon-kakao"></i>
+          <span>카카오 로그인</span>
+        </button>
+        <button>
+          <i class="icon-naver"></i>
+          <span>네이버 로그인</span>
+        </button>
       </div>
-      <button class="login__btn">로그인</button>
-      <p class="login-link">
-        <a href="#">아이디찾기</a>
-        <a href="#">비밀번호찾기</a>
-        <a href="#">회원가입</a>
-      </p>
-    </form>
-    <div class="login-sns">
-      <h3>SNS 간편 로그인</h3>
-      <button>
-        <i class="icon-kakao"></i>
-        <span>카카오 로그인</span>
-      </button>
-      <button>
-        <i class="icon-naver"></i>
-        <span>네이버 로그인</span>
-      </button>
-    </div>
     </div>
   </div>
   <!--// 로그인창 -->
-  
+
   <div class="wrap">
     <!-- Header -->
     <header class="header">
@@ -159,44 +159,44 @@
         <div class="personal-main clearfix">
           <div class="personal-left">
             <div class="swiper-container sw-personal">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
                   <a href="#">
                     <i class="sw-personal__icon sw-personal__icon--1"></i>
                     <span class="sw-personal__tit">음용내역</span>
                   </a>
-                </div>
-                <div class="swiper-slide">
+                </li>
+                <li class="swiper-slide">
                   <a href="#">
                     <i class="sw-personal__icon sw-personal__icon--2"></i>
                     <span class="sw-personal__tit">음용제품변경</span>
                   </a>
-                </div>
-                <div class="swiper-slide">
+                </li>
+                <li class="swiper-slide">
                   <a href="#">
                     <i class="sw-personal__icon sw-personal__icon--3"></i>
                     <span class="sw-personal__tit">찜한제품</span>
                   </a>
-                </div>
-                <div class="swiper-slide">
+                </li>
+                <li class="swiper-slide">
                   <a href="#">
                     <i class="sw-personal__icon sw-personal__icon--4"></i>
                     <span class="sw-personal__tit">고객번호등록/찾기</span>
                   </a>
-                </div>
-                <div class="swiper-slide">
+                </li>
+                <li class="swiper-slide">
                   <a href="#">
                     <i class="sw-personal__icon sw-personal__icon--5"></i>
                     <span class="sw-personal__tit">스마트청구서</span>
                   </a>
-                </div>
-                <div class="swiper-slide">
+                </li>
+                <li class="swiper-slide">
                   <a href="#">
                     <i class="sw-personal__icon sw-personal__icon--6"></i>
                     <span class="sw-personal__tit">배달건너뛰기</span>
                   </a>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
             <div class="swiper-pagination sw-personal__pg"></div>
           </div>
@@ -281,32 +281,38 @@
           <h2 class="best__tit">베스트 제품</h2>
           <ul class="age-list">
             <li class="age">
-              <a href="#" class="age-link">
+              <p class="age-link">
                 <span class="age__menu"><em>10</em>대</span>
                 <i class="age__icon age__icon--down"></i>
-              </a>
+              </p>
             </li>
             <li class="age age--focused">
-              <a href="#" class="age-link">
-                <span class="age__menu age__menu--focused"><em>20</em>대</span>
-              </a>
+              <p class="age-link">
+                <span class="age__menu"><em>20</em>대</span>
+              </p>
             </li>
             <li class="age">
-              <a href="#" class="age-link">
+              <p class="age-link">
                 <span class="age__menu"><em>30</em>대</span>
-              </a>
+              </p>
             </li>
             <li class="age">
-              <a href="#" class="age-link">
+              <p class="age-link">
                 <span class="age__menu"><em>40</em>대</span>
-              </a>
+              </p>
             </li>
             <li class="age">
-              <a href="#" class="age-link">
+              <p class="age-link">
                 <span class="age__menu"><em>50</em>대</span>
                 <i class="age__icon age__icon--up"></i>
-              </a>
+              </p>
             </li>
+            <span class="age-cover">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </span>
           </ul>
         </div>
         <div class="best-right">
@@ -314,10 +320,36 @@
             <li class="prd prd--1st">
               <a href="" class="prd-link">
                 <span class="prd__rank prd__rank--1st"><em>1</em>위</span>
-                <span class="prd__tit prd__tit--1st">식물성유산균쌀요거트</span>
-                <span class="prd__price prd__price--1st">2,000원</span>
-                <span class="prd__volume prd__volume--1st">(150ml)</span>
-                <img src="images/riceyogurt.jpg" alt="식물성유산균쌀요거트" class="prd__img prd__img--1st">
+                <p class="prd-cont prd-cont01">
+                  <span class="prd__tit prd__tit--1st"></span>
+                  <span class="prd__price prd__price--1st">원</span>
+                  <span class="prd__volume prd__volume--1st">()</span>
+                  <img src="images/no_img.png" alt="이미지없음" class="prd__img prd__img--1st">
+                </p>
+                <p class="prd-cont prd-cont02">
+                  <span class="prd__tit prd__tit--1st">식물성유산균쌀요거트</span>
+                  <span class="prd__price prd__price--1st">2,000원</span>
+                  <span class="prd__volume prd__volume--1st">(150ml)</span>
+                  <img src="images/riceyogurt.jpg" alt="식물성유산균쌀요거트" class="prd__img prd__img--1st">
+                </p>
+                <p class="prd-cont prd-cont03">
+                  <span class="prd__tit prd__tit--1st">위러브플러스</span>
+                  <span class="prd__price prd__price--1st">2,600원</span>
+                  <span class="prd__volume prd__volume--1st">(130ml)</span>
+                  <img src="images/wilove.jpg" alt="위러브플러스" class="prd__img prd__img--1st">
+                </p>
+                <p class="prd-cont prd-cont04">
+                  <span class="prd__tit prd__tit--1st">위러브플러스</span>
+                  <span class="prd__price prd__price--1st">2,600원</span>
+                  <span class="prd__volume prd__volume--1st">(130ml)</span>
+                  <img src="images/wilove.jpg" alt="위러브플러스" class="prd__img prd__img--1st">
+                </p>
+                <p class="prd-cont prd-cont05">
+                  <span class="prd__tit prd__tit--1st">위러브플러스</span>
+                  <span class="prd__price prd__price--1st">2,600원</span>
+                  <span class="prd__volume prd__volume--1st">(130ml)</span>
+                  <img src="images/wilove.jpg" alt="위러브플러스" class="prd__img prd__img--1st">
+                </p>
               </a>
               <a href="#">
                 <i class="prd__wish">찜하기</i>
@@ -326,10 +358,36 @@
             <li class="prd">
               <a href="#" class="prd-link">
                 <span class="prd__rank"><em>2</em>위</span>
-                <img src="images/loveme.jpg" alt="러브미 케일&셀러리" class="prd__img">
-                <span class="prd__tit">러브미 케일&셀러리</span>
-                <span class="prd__price">1,800원</span>
-                <span class="prd__volume">(130ml)</span>
+                <p class="prd-cont prd-cont01">
+                  <img src="images/no_img.png" alt="이미지없음" class="prd__img">
+                  <span class="prd__tit"></span>
+                  <span class="prd__price">원</span>
+                  <span class="prd__volume">()</span>
+                </p>
+                <p class="prd-cont prd-cont02">
+                  <img src="images/loveme.jpg" alt="러브미 케일&셀러리" class="prd__img">
+                  <span class="prd__tit">러브미 케일&셀러리</span>
+                  <span class="prd__price">1,800원</span>
+                  <span class="prd__volume">(130ml)</span>
+                </p>
+                <p class="prd-cont prd-cont03">
+                  <img src="images/loveme.jpg" alt="러브미 케일&셀러리" class="prd__img">
+                  <span class="prd__tit">러브미 케일&셀러리</span>
+                  <span class="prd__price">1,800원</span>
+                  <span class="prd__volume">(130ml)</span>
+                </p>
+                <p class="prd-cont prd-cont04">
+                  <img src="images/noni.jpg" alt="노니&깔라만시" class="prd__img">
+                  <span class="prd__tit">노니&깔라만시</span>
+                  <span class="prd__price">2,100원</span>
+                  <span class="prd__volume">(130ml)</span>
+                </p>
+                <p class="prd-cont prd-cont05">
+                  <img src="images/noni.jpg" alt="노니&깔라만시" class="prd__img">
+                  <span class="prd__tit">노니&깔라만시</span>
+                  <span class="prd__price">2,100원</span>
+                  <span class="prd__volume">(130ml)</span>
+                </p>
               </a>
               <a href="#">
                 <i class="prd__wish">찜하기</i>
@@ -340,10 +398,36 @@
             <li class="prd">
               <a href="#" class="prd-link">
                 <span class="prd__rank"><em>3</em>위</span>
-                <img src="images/sms_wi.jpg" alt="식물성유산균 위&캡슐" class="prd__img">
-                <span class="prd__tit">식물성유산균 위&캡슐</span>
-                <span class="prd__price">2,100원</span>
-                <span class="prd__volume">(130ml)</span>
+                <p class="prd-cont prd-cont01">
+                  <img src="images/no_img.png" alt="이미지없음" class="prd__img">
+                  <span class="prd__tit"></span>
+                  <span class="prd__price">원</span>
+                  <span class="prd__volume">()</span>
+                </p>
+                <p class="prd-cont prd-cont02">
+                  <img src="images/sms_wi.jpg" alt="식물성유산균 위&캡슐" class="prd__img">
+                  <span class="prd__tit">식물성유산균 위&캡슐</span>
+                  <span class="prd__price">2,100원</span>
+                  <span class="prd__volume">(130ml)</span>
+                </p>
+                <p class="prd-cont prd-cont03">
+                  <img src="images/noni.jpg" alt="노니&깔라만시" class="prd__img">
+                  <span class="prd__tit">노니&깔라만시</span>
+                  <span class="prd__price">2,100원</span>
+                  <span class="prd__volume">(130ml)</span>
+                </p>
+                <p class="prd-cont prd-cont04">
+                  <img src="images/myungil.jpg" alt="명일엽&헛개 발효녹즙" class="prd__img">
+                  <span class="prd__tit">명일엽&헛개 발효녹즙</span>
+                  <span class="prd__price">2,100원</span>
+                  <span class="prd__volume">(130ml)</span>
+                </p>
+                <p class="prd-cont prd-cont05">
+                  <img src="images/dolminari.jpg" alt="돌미나리와민들레" class="prd__img">
+                  <span class="prd__tit">돌미나리와민들레</span>
+                  <span class="prd__price">2,400원</span>
+                  <span class="prd__volume">(130ml)</span>
+                </p>
               </a>
               <a href="#">
                 <i class="prd__wish">찜하기</i>
@@ -352,10 +436,36 @@
             <li class="prd">
               <a href="#" class="prd-link">
                 <span class="prd__rank"><em>4</em>위</span>
-                <img src="images/noni.jpg" alt="노니&깔라만시" class="prd__img">
-                <span class="prd__tit">노니&깔라만시</span>
-                <span class="prd__price">2,100원</span>
-                <span class="prd__volume">(130ml)</span>
+                <p class="prd-cont prd-cont01">
+                  <img src="images/mailachim.jpg" alt="매일아침 튼튼플러스" class="prd__img">
+                  <span class="prd__tit">매일아침 튼튼플러스</span>
+                  <span class="prd__price">1,500원</span>
+                  <span class="prd__volume">(100ml)</span>
+                </p>
+                <p class="prd-cont prd-cont02">
+                  <img src="images/noni.jpg" alt="노니&깔라만시" class="prd__img">
+                  <span class="prd__tit">노니&깔라만시</span>
+                  <span class="prd__price">2,100원</span>
+                  <span class="prd__volume">(130ml)</span>
+                </p>
+                <p class="prd-cont prd-cont03">
+                  <img src="images/masinen.jpg" alt="마시는 새싹" class="prd__img">
+                  <span class="prd__tit">마시는 새싹</span>
+                  <span class="prd__price">2,100원</span>
+                  <span class="prd__volume">(130ml)</span>
+                </p>
+                <p class="prd-cont prd-cont04">
+                  <img src="images/heartlove.jpg" alt="하트러브 레드비트&당근" class="prd__img">
+                  <span class="prd__tit">하트러브 레드비트&당근</span>
+                  <span class="prd__price">2,100원</span>
+                  <span class="prd__volume">(130ml)</span>
+                </p>
+                <p class="prd-cont prd-cont05">
+                  <img src="images/sms_omega.jpg" alt="식물성유산균 오메가&치아씨드" class="prd__img">
+                  <span class="prd__tit">식물성유산균 오메가&치아씨드</span>
+                  <span class="prd__price">2,100원</span>
+                  <span class="prd__volume">(130ml)</span>
+                </p>
               </a>
               <a href="#">
                 <i class="prd__wish">찜하기</i>
@@ -364,10 +474,36 @@
             <li class="prd">
               <a href="#" class="prd-link">
                 <span class="prd__rank"><em>5</em>위</span>
-                <img src="images/sms_omega.jpg" alt="식물성유산균 오메가&치아씨드" class="prd__img">
-                <span class="prd__tit">식물성유산균 오메가&치아씨드</span>
-                <span class="prd__price">2,100원</span>
-                <span class="prd__volume">(130ml)</span>
+                <p class="prd-cont prd-cont01">
+                  <img src="images/ilove.jpg" alt="아이러브 루테인" class="prd__img">
+                  <span class="prd__tit">아이러브 루테인</span>
+                  <span class="prd__price">2,600원</span>
+                  <span class="prd__volume">(130ml)</span>
+                </p>
+                <p class="prd-cont prd-cont02">
+                  <img src="images/sms_omega.jpg" alt="식물성유산균 오메가&치아씨드" class="prd__img">
+                  <span class="prd__tit">식물성유산균 오메가&치아씨드</span>
+                  <span class="prd__price">2,100원</span>
+                  <span class="prd__volume">(130ml)</span>
+                </p>
+                <p class="prd-cont prd-cont03">
+                  <img src="images/sms_wi.jpg" alt="식물성유산균 위&캡슐" class="prd__img">
+                  <span class="prd__tit">식물성유산균 위&캡슐</span>
+                  <span class="prd__price">2,100원</span>
+                  <span class="prd__volume">(130ml)</span>
+                </p>
+                <p class="prd-cont prd-cont04">
+                  <img src="images/masinen.jpg" alt="마시는 새싹" class="prd__img">
+                  <span class="prd__tit">마시는 새싹</span>
+                  <span class="prd__price">2,100원</span>
+                  <span class="prd__volume">(130ml)</span>
+                </p>
+                <p class="prd-cont prd-cont05">
+                  <img src="images/myungil.jpg" alt="명일엽&헛개 발효녹즙" class="prd__img">
+                  <span class="prd__tit">명일엽&헛개 발효녹즙</span>
+                  <span class="prd__price">2,100원</span>
+                  <span class="prd__volume">(130ml)</span>
+                </p>
               </a>
               <a href="#">
                 <i class="prd__wish">찜하기</i>
@@ -560,7 +696,7 @@
           <ul class="addr clearfix">
             <li class="clearfix">
               <span class="footer__item">통신판매번호 : 2016-충북증평-00045&nbsp;</span>
-              <span class="footer__item footer__item--bold">사업자정보확인</span>
+              <a href="#" class="footer__item footer__item--bold">사업자정보확인</a>
             </li>
             <li>
               <span class="footer__item">㈜풀무원녹즙 충청북도 증평군 도안면 원명로 35</span>

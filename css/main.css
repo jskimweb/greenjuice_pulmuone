@@ -54,12 +54,12 @@ body {
 
 /* 로그인창 */
 .login {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   display: none;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, .6);
   z-index: 7;
 }
@@ -317,7 +317,6 @@ body {
 }
 
 .header-top__menu {
-  position: relative;
   display: block;
   float: left;
   font-size: 1.1rem;
@@ -391,19 +390,16 @@ body {
 }
 
 .dep01 {
-  position: relative;
   display: block;
 }
 
 .dep01>li {
-  position: relative;
   display: block;
   float: left;
   padding-right: 6rem;
 }
 
 .mainmenu {
-  position: relative;
   display: block;
   font-size: 2rem;
   font-weight: 700;
@@ -429,7 +425,6 @@ body {
 }
 
 .my-menu-list>li {
-  position: relative;
   display: block;
   float: left;
   margin-left: 3rem;
@@ -440,7 +435,6 @@ body {
 }
 
 .my-menu__icon {
-  position: relative;
   display: block;
   width: 3rem;
   height: 3rem;
@@ -604,7 +598,7 @@ body {
   height: 100%;
 }
 
-.sw-main-slide img {
+.sw-main-slide a img {
   position: absolute;
   left: 50%;
   top: 0;
@@ -644,12 +638,10 @@ body {
 }
 
 .personal-top {
-  position: relative;
   display: block;
 }
 
 .personal__tit {
-  position: relative;
   display: block;
   font-size: 2.6rem;
   font-weight: 400;
@@ -673,19 +665,16 @@ body {
 }
 
 .sw-personal {
-  position: relative;
   display: block;
   padding-top: 1.9rem;
 }
 
-.sw-personal a {
-  position: relative;
+.sw-personal ul li a {
   display: block;
   text-align: center;
 }
 
 .sw-personal__icon {
-  position: relative;
   display: block;
   width: 4.6rem;
   height: 4.6rem;
@@ -718,7 +707,6 @@ body {
 }
 
 .sw-personal__tit {
-  position: relative;
   display: block;
   font-size: 1.5rem;
   letter-spacing: -.1rem;
@@ -755,7 +743,6 @@ body {
 }
 
 .personal__txt {
-  position: relative;
   display: block;
   font-size: 3.2rem;
   line-height: 1.375;
@@ -777,7 +764,6 @@ body {
 }
 
 .personal__login span {
-  position: relative;
   display: block;
   font-size: 1.5rem;
   line-height: 5rem;
@@ -794,7 +780,6 @@ body {
 }
 
 .reco__tit {
-  position: relative;
   display: block;
   font-size: 3.2rem;
   font-weight: 400;
@@ -847,26 +832,23 @@ body {
 }
 
 .prd__img {
-  position: relative;
   display: block;
   width: 26.8rem;
   height: 26.8rem;
 }
 
 .prd__tit {
-  position: relative;
   display: block;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.35;
-  letter-spacing: -0.5rem;
+  letter-spacing: -0.05rem;
   color: #333;
   font-family: "Montserrat", "Noto Sans KR";
   margin: 1.7rem 3rem .8rem 3rem;
 }
 
 .prd__price {
-  position: relative;
   display: inline-block;
   font-size: 1.7rem;
   color: #333;
@@ -874,7 +856,6 @@ body {
 }
 
 .prd__volume {
-  position: relative;
   display: inline-block;
   font-size: 1.5rem;
   color: #999;
@@ -894,7 +875,6 @@ body {
 }
 
 .reco-detail {
-  position: relative;
   display: block;
   font-size: 0;
   text-align: center;
@@ -902,7 +882,6 @@ body {
 }
 
 .reco-detail__txt {
-  position: relative;
   display: inline-block;
   font-size: 2.2rem;
   line-height: 3rem;
@@ -912,7 +891,6 @@ body {
 
 .reco-detail__txt::after {
   content: "";
-  position: relative;
   display: inline-block;
   width: 3rem;
   height: 3rem;
@@ -932,11 +910,10 @@ body {
   position: relative;
   display: block;
   float: left;
-  width: 25rem;
+  width: 22rem;
 }
 
 .best__tit {
-  position: relative;
   display: block;
   font-size: 3.2rem;
   font-weight: 500;
@@ -954,27 +931,24 @@ body {
 .age {
   position: relative;
   display: block;
-  padding-left: 1.5rem;
-}
-
-.age--focused {
-  background: #f0831f;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .age-link {
-  position: relative;
   display: block;
-  width: 23.5rem;
+  width: 100%;
   height: 5.6rem;
   font-size: 0;
+  padding-left: 1.5rem;
 }
 
 .age__menu {
-  position: relative;
   display: inline-block;
   font-size: 1.7rem;
   line-height: 5.6rem;
   color: #b5b5b5;
+  transition: all .3s;
 }
 
 .age__menu em {
@@ -983,24 +957,53 @@ body {
   font-style: normal;
 }
 
-.age__menu--focused {
+.age--focused .age__menu {
   color: #fff;
 }
 
 .age__icon {
-  position: relative;
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
   margin: 2.1rem 0 0 .7rem;
+  transition: all .3s;
 }
 
 .age__icon--down {
   background: url("../images/ico_sprite_pc.png") no-repeat -17.6rem -5rem;
 }
 
+.age--focused .age__icon--down {
+  background-position: -15.1rem -5rem;
+}
+
 .age__icon--up {
   background: url("../images/ico_sprite_pc.png") no-repeat -22.6rem -5rem;
+}
+
+.age--focused .age__icon--up {
+  background-position: -20.1rem -5rem;
+}
+
+.age-cover {
+  position: absolute;
+  left: 0;
+  top: 5.6rem;
+  display: block;
+  width: 100%;
+  height: 5.6rem;
+  background-color: #f0831f;
+  transition: all .3s;
+}
+
+.age-cover svg {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  color: #fff;
 }
 
 .best-right {
@@ -1053,6 +1056,14 @@ body {
   color: #429e31;
 }
 
+.prd-cont {
+  display: none;
+}
+
+.prd-cont02 {
+  display: block;
+}
+
 .prd__tit--1st {
   width: 19.8rem;
   font-size: 3.4rem;
@@ -1086,7 +1097,6 @@ body {
 }
 
 .banner a {
-  position: relative;
   display: block;
   width: 160rem;
   height: 32rem;
@@ -1107,7 +1117,6 @@ body {
 }
 
 .cs__tit {
-  position: relative;
   display: block;
   font-size: 3.2rem;
   font-weight: 500;
@@ -1125,7 +1134,6 @@ body {
 }
 
 .cs-more__txt {
-  position: relative;
   display: inline-block;
   font-size: 1.5rem;
   font-weight: 500;
@@ -1133,7 +1141,6 @@ body {
 }
 
 .cs-more__icon {
-  position: relative;
   display: inline-block;
   width: .7rem;
   height: 1rem;
@@ -1191,10 +1198,9 @@ body {
 }
 
 .cs__txt {
-  position: relative;
   display: block;
   font-size: 1.6rem;
-  letter-spacing: -0.7.5rem;
+  letter-spacing: -0.075rem;
   color: #333;
 }
 
@@ -1254,7 +1260,6 @@ body {
 .notice__tit,
 .cs-center__tit,
 .delivery__tit {
-  position: relative;
   display: block;
   font-size: 2.4rem;
   font-weight: 400;
@@ -1273,7 +1278,6 @@ body {
 }
 
 .notice-more__txt {
-  position: relative;
   display: inline-block;
   font-size: 1.5rem;
   font-weight: 400;
@@ -1283,7 +1287,6 @@ body {
 
 .notice-more::after {
   content: "";
-  position: relative;
   display: inline-block;
   width: .7rem;
   height: 1rem;
@@ -1302,21 +1305,18 @@ body {
 }
 
 .notice-list>li {
-  position: relative;
   display: block;
   font-size: 0;
   padding: .3rem 0 .4rem 0;
 }
 
 .notice-link {
-  position: relative;
   display: inline-block;
   width: 43.5rem;
   vertical-align: middle;
 }
 
 .notice__txt {
-  position: relative;
   display: block;
   font-size: 1.4rem;
   overflow: hidden;
@@ -1326,7 +1326,6 @@ body {
 }
 
 .notice__date {
-  position: relative;
   display: inline-block;
   width: 7.5rem;
   font-size: 1.4rem;
@@ -1336,32 +1335,27 @@ body {
 }
 
 .cs-center {
-  position: relative;
   display: block;
   float: left;
   width: 25%;
 }
 
 .cs-center-top {
-  position: relative;
   display: block;
 }
 
 .cs-center-cont {
-  position: relative;
   display: block;
   margin-top: 4rem;
 }
 
 .cs-center__call {
-  position: relative;
   display: block;
   font-size: 2.7rem;
   color: #000;
 }
 
 .cs-center__time {
-  position: relative;
   display: block;
   font-size: 1.4rem;
   color: #999;
@@ -1373,24 +1367,20 @@ body {
 }
 
 .delivery {
-  position: relative;
   display: block;
   float: left;
   width: 25%;
 }
 
 .delivery-top {
-  position: relative;
   display: block;
 }
 
 .delivery-cont {
-  position: relative;
   display: block;
 }
 
 .delivery__txt {
-  position: relative;
   display: block;
   font-size: 1.5rem;
   line-height: 1.6;
@@ -1398,7 +1388,6 @@ body {
 }
 
 .delivery-btn {
-  position: relative;
   display: inline-block;
   height: 3rem;
   font-size: 0;
@@ -1408,7 +1397,6 @@ body {
 }
 
 .delivery-btn__txt {
-  position: relative;
   display: inline-block;
   font-size: 1.3rem;
   line-height: 3rem;
@@ -1416,7 +1404,6 @@ body {
 }
 
 .delivery-btn__icon {
-  position: relative;
   display: inline-block;
   width: .5rem;
   height: .7rem;
@@ -1540,10 +1527,9 @@ body {
 }
 
 .footer__item {
-  position: relative;
   display: block;
   font-size: 1.2rem;
-  letter-spacing: -0.7.5rem;
+  letter-spacing: -0.075rem;
   color: #7e7e7e;
 }
 
@@ -1595,7 +1581,6 @@ body {
 }
 
 .footer__copy {
-  position: relative;
   display: block;
   font-size: 1.1rem;
   color: #7e7e7e;
@@ -1618,11 +1603,10 @@ body {
 }
 
 .family__btn {
-  position: relative;
   display: block;
   font-size: 1.3rem;
   line-height: 3rem;
-  letter-spacing: -0.2.5rem;
+  letter-spacing: -0.025rem;
   color: #555;
   border: .1rem solid #c6c6c6;
   border-radius: 1.7rem;
@@ -1643,12 +1627,11 @@ body {
 }
 
 .family-list--show {
-  height: 36.9rem;
+  height: 28rem;
   opacity: 1;
 }
 
 .family-list>ul {
-  position: relative;
   display: block;
   background: #fff;
   border: .1rem solid #c6c6c6;
@@ -1656,15 +1639,15 @@ body {
   padding: .8rem 1.5rem .7rem 1.5rem;
 }
 
-.family-list li {
-  position: relative;
+.family-list>ul>li {
   display: block;
   padding: .4rem 0 .3rem 0;
 }
 
 .family-list>ul>li {
+  display: block;
   border-bottom: .1rem dashed #c6c6c6;
-  padding-bottom: .5rem;
+  padding: .4rem 0 .5rem 0;
 }
 
 .family-list>ul>li:last-child {
@@ -1672,7 +1655,6 @@ body {
 }
 
 .family-list span {
-  position: relative;
   display: block;
   font-size: 1.3rem;
   letter-spacing: 0;
@@ -1704,7 +1686,6 @@ body {
 }
 
 .go-top__icon {
-  position: relative;
   display: block;
   width: 1.2rem;
   height: 1.5rem;
@@ -1713,7 +1694,6 @@ body {
 }
 
 .go-top__txt {
-  position: relative;
   display: block;
   font-size: 1.2rem;
   font-weight: 700;
@@ -1727,8 +1707,8 @@ body {
   left: 0;
   top: 0;
   display: none;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, .6);
   z-index: 3;
 }

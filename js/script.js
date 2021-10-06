@@ -10,6 +10,7 @@ window.onload = function () {
     loginId.focus();
     $('html, body').css('overflow', 'hidden');
   });
+
   loginClose.click(function () {
     login.hide();
     $('html, body').removeAttr('style');
@@ -27,6 +28,7 @@ window.onload = function () {
     blackBg.show();
     srchInput.focus();
   });
+
   srchClose.click(function () {
     srch.hide();
     blackBg.hide();
@@ -40,6 +42,7 @@ window.onload = function () {
     srch.hide();
     blackBg.hide();
   });
+  
   header.click(function (event) {
     event.stopPropagation();
   });
@@ -93,6 +96,23 @@ window.onload = function () {
     login.show();
     loginId.focus();
     $('html, body').css('overflow', 'hidden');
+  });
+
+  // Best 탭메뉴
+  const age = $('.age');
+  const ageCover = $('.age-cover');
+  const ageCoverPos = [0, 56, 112, 168, 224];
+  const prdCont = $('.prd-cont');
+  const prdConts = [$('.prd-cont01'), $('.prd-cont02'), $('.prd-cont03'), $('.prd-cont04'), $('.prd-cont05')];
+  
+  $.each(age, function (index) {
+    $(this).click(function () {
+      age.removeClass('age--focused');
+      $(this).addClass('age--focused');
+      ageCover.css('top', ageCoverPos[index]);
+      prdCont.hide();
+      prdConts[index].show();
+    });
   });
 
   // Banner Slide 슬라이드
