@@ -1,4 +1,21 @@
 window.onload = function () {
+  // 모달창 닫기
+  const modal = $('.modal');
+  const modalBox = $('.modal-box');
+  const modalClose = $('.modal__close');
+
+  modalClose.click(function () {
+    modal.stop().fadeOut();
+  });
+
+  modal.click(function () {
+    $(this).stop().fadeOut();
+  });
+
+  modalBox.click(function (event) {
+    event.stopPropagation();
+  });
+
   // 헤더상단 로그인 클릭 시 로그인창 보이기/숨기기
   const headerLogin = $('.header-top-right li').eq(0).children();
   const login = $('.login');
@@ -42,7 +59,7 @@ window.onload = function () {
     srch.hide();
     blackBg.hide();
   });
-  
+
   header.click(function (event) {
     event.stopPropagation();
   });
@@ -104,7 +121,7 @@ window.onload = function () {
   const ageCoverPos = [0, 56, 112, 168, 224];
   const prdCont = $('.prd-cont');
   const prdConts = [$('.prd-cont01'), $('.prd-cont02'), $('.prd-cont03'), $('.prd-cont04'), $('.prd-cont05')];
-  
+
   $.each(age, function (index) {
     $(this).click(function () {
       age.removeClass('age--focused');
