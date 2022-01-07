@@ -1,5 +1,18 @@
-# 풀무원 녹즙 퍼블리싱
+# 풀무원 녹즙 클론코딩
 
-퍼블리싱 : https://jskimweb.github.io/greenjuice_pulmuone
+풀무원 녹즙 웹사이트의 클론코딩 프로젝트입니다.
 
-원사이트 : https://greenjuice.pulmuone.com
+## 배포 링크
+
+https://jskimweb.github.io/greenjuice_pulmuone
+
+(원사이트 : https://greenjuice.pulmuone.com)
+
+## 기술 스택
+
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>jQuery</li>
+</ul>
